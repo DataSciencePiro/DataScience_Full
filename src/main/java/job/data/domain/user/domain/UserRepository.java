@@ -1,4 +1,4 @@
-package job.data.domain.user.domain.user;
+package job.data.domain.user.domain;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;

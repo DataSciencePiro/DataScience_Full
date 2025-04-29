@@ -1,8 +1,8 @@
 package job.data.domain.user.service;
 
 import jakarta.transaction.Transactional;
-import job.data.domain.user.domain.user.User;
-import job.data.domain.user.domain.user.UserRepository;
+import job.data.domain.user.domain.User;
+import job.data.domain.user.domain.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -53,6 +53,8 @@ public class UserService {
             user.setPassword(passwordEncoder.encode(user.getPassword()));
             user.setErrorMessage("성공");
             user.setUserId(UUID.randomUUID().toString());
+            user.setAuthority(false);
+            user.setType("기업");
             userRepository.save(user);
         }
         return user;

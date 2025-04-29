@@ -1,4 +1,4 @@
-package job.data.domain.user.domain.user;
+package job.data.domain.user.domain;
 
 
 import jakarta.persistence.Entity;
@@ -16,13 +16,19 @@ import lombok.Setter;
 public class User {
 
     @Id
-    private     String userId;
+    private String userId;
 
-    private     String loginId;
+    private String loginId;
 
     private String password;
 
     private String businessNumber;
+
+    // 기업용, 관리자용, 마스터용
+    private String type;
+
+    // 기업용은 무조건 false, 마스터가 관리자 지명해야됨
+    private boolean authority;
 
     @Transient
     private String passwordCheck;

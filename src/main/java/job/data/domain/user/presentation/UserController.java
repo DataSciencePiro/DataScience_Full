@@ -3,8 +3,8 @@ package job.data.domain.user.presentation;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
-import job.data.domain.user.domain.user.User;
-import job.data.domain.user.domain.user.UserRepository;
+
+import job.data.domain.user.domain.User;
 import job.data.domain.user.service.UserService;
 import job.data.global.config.session.SessionConst;
 import lombok.RequiredArgsConstructor;
