@@ -90,6 +90,7 @@ public class AdminController {
     @PostMapping("/list/{id}")
     public String postAdminList(@PathVariable("id") String adminId){
 
+
         adminService.updateAuthority(adminId);
         return "redirect:/admin/list";
     }
